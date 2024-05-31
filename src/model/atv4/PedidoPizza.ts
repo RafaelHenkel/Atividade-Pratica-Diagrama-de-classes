@@ -12,6 +12,14 @@ class PedidoPizza {
   adicionarPizza(pizza: CardapioPizzaType) {
     this.pizzas.push(pizza);
   }
+  removerPizza(sabor: string) {
+    const indexPizza = this.pizzas.findIndex((item) => item.sabor === sabor);
+    if (indexPizza !== 1) {
+      this.pizzas.splice(indexPizza, 1);
+    } else {
+      console.log("pizza nao encontrada no pedido");
+    }
+  }
   imprimirPedido() {
     console.log(this.pizzas);
   }
