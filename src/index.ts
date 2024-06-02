@@ -1,4 +1,4 @@
-import { Cardapio, Pedido } from "./model";
+import { Cardapio, PedidoPizza, Item, Pedido } from "./model";
 
 const cardapio1 = new Cardapio({
   sabor: "calabresa",
@@ -14,7 +14,7 @@ const cardapio3 = new Cardapio({
   valor: 120,
 });
 
-const pedido1 = new Pedido();
+const pedido1 = new PedidoPizza();
 pedido1.adicionarPizza(cardapio1);
 pedido1.adicionarPizza(cardapio2);
 pedido1.adicionarPizza(cardapio3);
